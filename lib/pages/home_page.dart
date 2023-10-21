@@ -33,12 +33,20 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: 
-        ListView.builder(
-          itemCount: carList.length,
-          itemBuilder: (context, index) {
+        Center(
           
-          return CarCards(car: carList[index]);
-        },
+          child: Container(
+            
+            width: 500,
+            child: ListView.builder(
+  
+              itemCount: carList.length,
+              itemBuilder: (context, index) {
+              
+              return CarCards(car: carList[index], index: index+1,);
+            },
+            ),
+          ),
         ),
       
     );
