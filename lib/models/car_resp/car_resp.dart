@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import '../cars/cars.dart'
+import '../cars/cars.dart';
 
 part 'car_resp.freezed.dart';
 part 'car_resp.g.dart';
@@ -8,7 +8,7 @@ part 'car_resp.g.dart';
 class CarResp with _$CarResp {
 
   factory CarResp({
-    required List<Cars> car,
+    required List<Cars> cars,
   }) = _CarResp;
 
   factory CarResp.fromJson(Map<String, dynamic> json) => _$CarRespFromJson(json);

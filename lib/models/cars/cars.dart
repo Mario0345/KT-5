@@ -10,8 +10,8 @@ class PriceConverter implements JsonConverter<double, String>{
     return double.parse(json.replaceAll("\$", ''));
   }
   @override
-  String toJson(double object){
-    throw UnimplementedError();
+  String toJson(double val){
+    return "\$$val";
   }
 
 }
@@ -20,7 +20,7 @@ class PriceConverter implements JsonConverter<double, String>{
 class Cars with _$Cars {
   const Cars._();
   factory Cars({
-    required int id,
+    @JsonKey(name: 'id' ) required int id,
     @JsonKey(name: 'car' ) required String brand,
     @JsonKey(name: 'car_model' ) required String brand_model,
     @JsonKey(name: 'car_color' ) required String car_color,
